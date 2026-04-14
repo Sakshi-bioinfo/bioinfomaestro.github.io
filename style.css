@@ -1024,7 +1024,8 @@ background:white;
   }
 
   .timeline-item {
-    width: 45%;   /* 👈 2 cards per row */
+    width: 100%;   /* ✅ stack cards */
+    max-width: 500px;  /* optional: keeps it neat */
   }
 
 }
