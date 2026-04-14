@@ -1,0 +1,33 @@
+---
+layout: default
+custom_css: /blog-post.css
+---
+
+<section class="blog-post-page">
+<div id="progress-bar"></div>
+  <article class="blog-post-article">
+
+    <h1 class="blog-title">{{ page.title }}</h1>
+
+<div class="blog-meta">
+  <span class="blog-post-date">
+    {{ page.date | date: "%B %d, %Y" }}
+  </span>
+
+  {% if page.read_time %}
+  <span class="read-time">{{ page.read_time }} min read</span>
+  {% endif %}
+</div>
+
+    {% if page.image %}
+    <div class="blog-post-featured-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <div class="blog-post-body">
+      {{ content }}
+    </div>
+
+  </article>
+</section>

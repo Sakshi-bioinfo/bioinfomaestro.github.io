@@ -1,0 +1,31 @@
+- title: Scientific Administrative Assistant
+  place: Jaypee Institute of Technology Delhi, Noida, India
+  date: January 2026 - Ongoing
+  image: /images/jiit-delhi.jpg
+  description: >
+    Working on the development of machine learning models for disease-related applications, with focus on deep learning and neural networks. Involved in building and training CNN-based models, implementing image classification pipelines, and exploring advanced techniques for object detection.
+  reverse: false
+
+- title: Research / M.Sc. Dissertation
+  place: Indian Institute of Technology Delhi, New Delhi, India
+  date: January - September 2025
+  image: /images/iit-delhi1.jpg
+  description: >
+    My MSc dissertation focused on developing machine learning models for prognostic modeling in meningioma using transcriptomic data. I performed sex-stratified analysis to investigate biological differences, applying differential expression and feature selection techniques. Multiple survival models, including Random Survival Forest, SVM-based approaches, LASSO, and CoxPH, were built and evaluated using C-index, AUC, and Brier score, along with external validation. Explainable AI (SHAP) was used to identify key prognostic features and derive minimal gene signatures for improved interpretability.
+  reverse: true
+
+- title: Project Research Assistant
+  place: Indian Institute of Information Technology Delhi, New Delhi, India
+  date: July - December 2024
+  image: /images/iiit-delhi.jpg
+  description: >
+    At IIIT Delhi, I worked on the OncoGen.AI project, contributing to the development of its user interface using R Shiny. I designed and implemented interactive components for visualizing genomic data, ensuring usability and clarity for end users. The work involved integrating frontend elements with backend analytical workflows to enable seamless exploration of mutation data. Through this experience, I gained practical exposure to building data-driven applications and translating complex biological analyses into intuitive, user-friendly interfaces for research and clinical use.
+  reverse: false
+
+- title: Undergraduate Research Project
+  place: Deshbandhu College, University of Delhi, New Delhi, India
+  date: January - September 2025
+  image: /images/du.png
+  description: >
+    As part of the DBT Star College Scheme, I worked on a project focused on vitamin D awareness, involving survey design, data collection, and statistical analysis. Contributed to scientific writing and editing of the study, ensuring clarity and coherence in presenting results. This experience provided early exposure to research methodologies, including study design, data interpretation, and effective scientific communication, and helped build a foundation for my research in biology.
+  reverse: true

@@ -1,0 +1,190 @@
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <h2 class="footer-title">Contact</h2>
+
+    <div class="footer-top">
+      <div class="footer-block">
+        <p class="footer-label">Follow me on social media:</p>
+        <div class="icon-row">
+          <a href="https://www.linkedin.com/in/sakshisharma-bioinfo" target="_blank" class="icon-circle linkedin" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="https://www.instagram.com/bioinfomaestro/?hl=en" target="_blank" class="icon-circle instagram" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://x.com/Sakshi_bioinfo?t=veMjBR3aaIK66ApSv1RcJA&s=09" class="icon-circle twitter" target="_blank">
+            <img src="{{ '/images/icons/twitter.svg' | relative_url }}" alt="Twitter">
+          </a>
+
+          <!-- <a href="https://www.youtube.com/channel/UCAvJUWnVGNYQVrC_kcpClng" class="icon-circle youtube" target="_blank">
+            <img src="{{ '/images/icons/youtube.svg' | relative_url }}" alt="YouTube">
+          </a> -->
+
+          <a href="https://bsky.app/profile/bioinfomaestro.bsky.social" class="icon-circle bluesky" target="_blank">
+            <img src="{{ '/images/icons/bluesky-white.svg' | relative_url }}" alt="Bluesky">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <p class="footer-label">View my academic profiles:</p>
+        <div class="academic-links">
+          <a href="https://github.com/Sakshi-bioinfo" class="academic-icon github" target="_blank">
+            <img src="{{ '/images/icons/github.svg' | relative_url }}" alt="GitHub">
+          </a>
+
+          <a href="https://scholar.google.com/citations?hl=en&user=frLwt70AAAAJ" class="academic-icon" target="_blank">
+            <img src="{{ '/images/icons/google-scholar.svg' | relative_url }}" alt="Google Scholar">
+          </a>
+
+          <a href="https://orcid.org/0009-0004-7026-4703" class="academic-icon" target="_blank">
+            <img src="{{ '/images/icons/orcid.svg' | relative_url }}" alt="ORCID">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-form-section">
+      <p class="footer-label">Or drop me an email using this form:</p>
+
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="input-group">
+            <label for="name">Name <span>*</span></label>
+            <input type="text" id="name" placeholder="Name">
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email <span>*</span></label>
+            <input type="email" id="email" placeholder="Email Address" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+">
+          </div>
+        </div>
+
+        <div class="input-group full-width">
+          <label for="message">Message <span>*</span></label>
+          <textarea id="message" placeholder="Your Message"></textarea>
+        </div>
+
+        <button type="button" id="send-btn" disabled>Send</button>
+      </form>
+    </div>
+
+  </div>
+<div id="toast" class="toast">Message Sent Successfully! 🎉</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+  emailjs.init("q9gQ97qjO3F2phi3n"); // replace with your key
+  })();
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+  const sendBtn = document.getElementById('send-btn');
+
+  function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.innerText = message;
+
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000); // disappears after 3 sec
+}
+
+function isValidEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
+  function checkForm() {
+    if (
+      nameInput.value.trim() !== '' &&
+      emailInput.value.trim() !== '' &&
+      messageInput.value.trim() !== ''
+    ) {
+      sendBtn.disabled = false;
+      sendBtn.classList.add('enabled');
+    } else {
+      sendBtn.disabled = true;
+      sendBtn.classList.remove('enabled');
+    }
+  }
+
+  nameInput.addEventListener('input', checkForm);
+  emailInput.addEventListener('input', checkForm);
+  messageInput.addEventListener('input', checkForm);
+
+  // REMOVE ERROR WHEN USER TYPES AGAIN
+function removeError(input) {
+  input.parentElement.classList.remove("input-error");
+}
+
+nameInput.addEventListener("input", () => removeError(nameInput));
+emailInput.addEventListener("input", () => removeError(emailInput));
+messageInput.addEventListener("input", () => removeError(messageInput));
+
+  sendBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+
+  const emailValue = emailInput.value.trim();
+
+  // ❌ EMAIL VALIDATION CHECK
+  if (!isValidEmail(emailValue)) {
+    showToast("Please enter a valid email address ❌");
+    emailInput.parentElement.classList.add("input-error");
+    return;
+  }
+
+  let templateParams = {
+    name: nameInput.value,
+    email: emailValue,
+    message: messageInput.value
+  };
+
+  sendBtn.innerText = "Sending...";
+  sendBtn.disabled = true;
+
+  emailjs.send(
+    "service_6ruy5wm",
+    "template_xj2jorw",
+    templateParams
+  )
+  .then(function() {
+    showToast("Message Sent Successfully! 🎉");
+
+    nameInput.value = "";
+    emailInput.value = "";
+    messageInput.value = "";
+
+    sendBtn.innerText = "Send";
+    sendBtn.disabled = true;
+    sendBtn.classList.remove('enabled');
+  })
+  .catch(function(error) {
+  showToast("Failed to send message ❌");
+
+  // ADD RED BORDER
+  nameInput.parentElement.classList.add("input-error");
+  emailInput.parentElement.classList.add("input-error");
+  messageInput.parentElement.classList.add("input-error");
+
+  sendBtn.innerText = "Send";
+  sendBtn.disabled = false;
+
+  console.error(error);
+});
+});
+</script>
+
+<script>
+function toggleMenu() {
+  const nav = document.querySelector("nav");
+  nav.classList.toggle("active");
+}
+</script>

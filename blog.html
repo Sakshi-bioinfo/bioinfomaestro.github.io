@@ -1,0 +1,49 @@
+---
+layout: blog
+title: Blog
+permalink: /blog/
+custom_css: /blog.css
+---
+
+<section class="blog-page">
+  <section class="blog-section">
+    <h1>Blog</h1>
+
+    {% assign current_month = "" %}
+
+    {% for post in site.posts %}
+      {% assign post_month = post.date | date: "%B %Y" %}
+
+      {% if post_month != current_month %}
+        {% unless forloop.first %}
+
+        {% endunless %}
+        <div class="blog-month-group">
+          <h2>{{ post_month }}</h2>
+        {% assign current_month = post_month %}
+      {% endif %}
+
+      <div class="blog-post">
+        <div class="blog-post-image">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        </div>
+
+        <div class="blog-post-content">
+  <a href="{{ post.url | relative_url }}" class="blog-post-title">
+    {{ post.title }}
+  </a>
+<p class="blog-post-meta">
+  {{ post.date | date: "%d %B %Y" }} • {{ post.read_time }} min read
+</p>
+
+</div>
+      </div>
+
+      <hr class="blog-divider">
+
+      {% if forloop.last %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+</section>

@@ -1,0 +1,108 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+custom_css: /publications.css
+---
+
+<section class="publications-page">
+  <section class="publications-section">
+    <h1>Publications</h1>
+
+    <!--<div class="publication-group">
+      <h2>Research Papers</h2>
+      <ol class="publication-list">
+        <li>
+          <a href="PASTE_YOUR_RESEARCH_PAPER_LINK_HERE" target="_blank" rel="noopener noreferrer">
+            Paste your full research paper citation here
+          </a>
+          <span class="impact-factor">(IF 5.4)</span>
+        </li>
+      </ol>
+    </div>-->
+
+    <!--<section class="publication-group">
+  <h2>Research Papers</h2>
+
+  {% for paper in site.data.publications.research %}
+  <div class="publication-card">
+
+    <div class="publication-content">
+      <h3 class="publication-title">
+        <a href="{{ paper.doi }}" target="_blank">
+          {{ paper.title }}
+        </a>
+      </h3>
+	<p class="publication-authors">
+    {{ paper.authors }}
+  </p>
+
+  <p class="publication-venue">
+    {{ paper.journal }}{{ paper.book }}
+  </p>
+
+       <h4 class="publication-abstract-heading">Abstract</h4>
+
+      <p class="publication-description">
+        {{ paper.description }}
+      </p>
+    </div>
+
+    <div class="publication-image">
+      <img src="{{ paper.image | relative_url }}" alt="Paper Image">
+    </div>
+
+  </div>
+
+  <hr class="publication-divider">
+  {% endfor %}
+</section>-->
+
+
+<section class="publication-group">
+  <h2>Book Chapters</h2>
+
+  {% for paper in site.data.publications.book_chapters %}
+  <div class="publication-card">
+
+    <div class="publication-content">
+      <h3 class="publication-title">
+        <a href="{{ paper.doi }}" target="_blank">
+          {{ paper.title }}
+        </a>
+      </h3>
+	<p class="publication-authors">
+    {{ paper.authors }}
+  </p>
+
+  <p class="publication-venue">
+    {{ paper.journal }}{{ paper.book }}
+  </p>
+        <h4 class="publication-abstract-heading">Abstract</h4>
+
+      <p class="publication-description">
+        {{ paper.description }}
+      </p>
+    </div>
+
+    <div class="publication-image">
+      <img src="{{ paper.image | relative_url }}" alt="Book Image">
+    </div>
+
+  </div>
+
+  <hr class="publication-divider">
+  {% endfor %}
+</section>
+
+    <div class="publication-links">
+      <a href="https://scholar.google.com/citations?hl=en&user=frLwt70AAAAJ" target="_blank" rel="noopener noreferrer" class="publication-btn">
+        Google Scholar
+      </a>
+
+      <a href="https://www.researchgate.net/profile/Sakshi-Sharma-96?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" class="publication-btn">
+        ResearchGate
+      </a>
+    </div>
+  </section>
+</section>

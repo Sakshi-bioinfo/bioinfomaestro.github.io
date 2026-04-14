@@ -1,0 +1,23 @@
+research:
+  - title: "Sex-stratified prognostic modeling in meningioma using explainable AI reveals distinct molecular risk signatures"
+    authors: "Sakshi Sharma, Author2, Author3"
+    journal: "Journal Name, 2026"
+    doi: "https://doi.org/YOUR_LINK"
+    image: "/images/papers/paper1.png"
+    description: >
+      This study presents a sex-stratified machine learning framework for predicting tumor recurrence in meningioma using transcriptomic data. The work integrates explainable AI to identify sex-specific molecular signatures and improve prognostic accuracy.
+
+  - title: "Another Research Paper Title"
+    doi: "https://doi.org/xyz"
+    image: "/images/papers/paper2.png"
+    description: >
+      Short explanation of your work.
+
+book_chapters:
+  - title: "Generative AI in Drug Designing: Current State-of-the-Art and Perspectives"
+    authors: "Shaban Ahmad, Nagmi Bano, Sakshi Sharma, Shafiya Sakina, Naeem Ahmad & Khalid Raza"
+    book: "Generative AI: Current Trends and Applications (Springer)"
+    doi: "https://doi.org/10.1007/978-981-97-8460-8_20"
+    image: "/images/papers/book_chapter1.jpg"
+    description: >
+      Generative Artificial Intelligence (GenAI) is a branch of AI focused on creating new data or outputs, such as images, text, sounds, and molecular structures of novel compounds resembling the training data. Drug designing is discovering and developing new medications by identifying molecular targets related to diseases, designing molecules that interact with these targets, and optimizing their properties for efficacy, safety, and specificity. In the current scenario, the drug designing and optimization is very slow and can be accelerated through GenAI by significantly fast-tracking the process by generating novel molecular structures, optimizing lead compounds, facilitating de novo drug design and assisting in navigating complex chemical spaces, overcoming data limitations, and enhancing the efficiency of preclinical screening. In this chapter, we have mined various available literature through PubMed, read them thoroughly, and understood how GenAI could be effectively used in drug design. Various generative models, including variational autoencoders, generative adversarial networks, and reinforcement learning, have been used, providing promising solutions, and their applications are rigorously examined, from compound generation to lead optimization and de novo drug design. We also have explored deep learning techniques for molecular generation and representation methods and critically assessed the transformative potential of GenAI on drug development and preclinical studies. GenAI is making the drug design and development process smoother and faster; however, the models still need to be explored and optimized for efficient use in drug design.

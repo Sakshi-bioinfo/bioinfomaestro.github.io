@@ -1,0 +1,143 @@
+---
+layout: default
+title: Research
+permalink: /research/
+custom_css: /research.css
+---
+
+<section class="research-page">
+
+  <section class="research-section">
+    <h1>Research</h1>
+
+    <div class="research-overview">
+      <h2>Overview</h2>
+
+       <p>
+          My research lies at the intersection of biology and machine learning, focusing on building predictive and interpretable models using transcriptomic data. The work centers on understanding disease progression through data-driven approaches and uncovering meaningful patterns from complex biological datasets, including biomarker discovery, outcome prediction, and model evaluation.
+        </p>
+        <p>
+         My work explores survival modeling, explainable AI, and the integration of computational methods into clinically relevant applications. This interest comes from the potential of machine learning to transform large-scale molecular data into interpretable and actionable knowledge, particularly in the context of cancer biology and precision medicine. I aim to extend this work toward deep learning, multi-omics integration, and single-cell analysis to develop robust and scalable frameworks that can support more precise and accessible healthcare to all.
+        </p>
+
+<div class="research-slider-section">
+  <div class="research-slider">
+    <div class="research-slide active">
+      <img src="{{ '/images/bioinformatics.png' | relative_url }}" alt="Bioinformatics">
+      <div class="research-slide-title">Bioinformatics</div>
+    </div>
+
+    <div class="research-slide next">
+      <img src="{{ '/images/genomics.png' | relative_url }}" alt="Machine Learning in Genomics and Transcriptomics">
+      <div class="research-slide-title">Machine learning in Genomics</div>
+    </div>
+
+    <div class="research-slide next">
+      <img src="{{ '/images/multiomics.png' | relative_url }}" alt="Multi-omics Studies">
+      <div class="research-slide-title">Multi-omics Studies</div>
+    </div>
+
+    <div class="research-slide prev">
+      <img src="{{ '/images/software.png' | relative_url }}" alt="Software and Programs for Clinical Use">
+      <div class="research-slide-title">Software & Programs for Clinical Use</div>
+    </div>
+  </div>
+</div>
+
+<a href="{{ '/talks/' | relative_url }}" class="research-talks-btn">
+  Check my Presentations
+</a>
+    </div>
+  </section>
+
+  <section class="research-topics-section">
+
+    <!-- TOPIC 1 -->
+    <div class="research-topic-card">
+      <div class="research-topic-text">
+        <h3>Machine Learning in Genomics and Transcriptomics</h3>
+        <p>
+          Machine learning has become an essential tool for extracting meaningful insights from high-dimensional genomic and transcriptomic data. My work in this area focuses on leveraging these approaches to model complex biological systems, particularly through the analysis of gene expression data. By applying computational techniques to transcriptomic datasets, I aim to identify patterns associated with disease progression, uncover potential biomarkers, and improve the predictive understanding of clinical outcomes.
+        </p>
+ <p> A key aspect of this work involves developing interpretable models that balance predictive performance with biological relevance. I explore methods such as survival modeling and explainable AI to ensure that model outputs can be translated into actionable insights in a clinical context. Looking ahead, I aim to extend these approaches by integrating deep learning, multi-omics data, and single-cell technologies to build more comprehensive and scalable frameworks for understanding disease biology and enabling precision medicine. </p>
+      </div>
+
+      <div class="research-topic-image">
+        <img src="{{ '/images/genomics.png' | relative_url }}" alt="Machine learning in genomics and transcriptomics">
+      </div>
+    </div>
+
+
+    <!-- TOPIC 2 -->
+    <div class="research-topic-card">
+      <div class="research-topic-text">
+        <h3>Multi-omics Studies</h3>
+        <p>
+          I am interested in integrating multiple layers of biological information,
+          including genomics, transcriptomics, and other omics data, to better
+          understand disease mechanisms and molecular heterogeneity.
+        </p>
+        <p>
+          Multi-omics approaches provide a broader systems-level perspective and help
+          reveal relationships that may not be visible through single-data-type
+          analyses. I see this as an important direction for improving biological
+          interpretation and translational research.
+        </p>
+      </div>
+
+      <div class="research-topic-image">
+        <img src="{{ '/images/multiomics.png' | relative_url }}" alt="Multi-omics studies">
+      </div>
+    </div>
+
+    <!-- TOPIC 3 -->
+    <div class="research-topic-card">
+      <div class="research-topic-text">
+        <h3>Software and Programs for Clinical Use</h3>
+        <p>
+          Another important area of my work is the development of computational tools,
+          user-friendly software frameworks, and analytical programs that can help make
+          complex biomedical analyses more accessible to researchers and, eventually,
+          more usable in clinical settings.
+        </p>
+        <p>
+          I am especially interested in building tools that are not only technically
+          sound, but also interpretable, practical, and capable of bridging the gap
+          between computational innovation and real-world biomedical application.
+        </p>
+      </div>
+
+      <div class="research-topic-image">
+        <img src="{{ '/images/software.png' | relative_url }}" alt="Software and programs for clinical use">
+      </div>
+    </div>
+
+  </section>
+
+</section>
+
+<script>
+  const researchSlides = document.querySelectorAll('.research-slide');
+  let currentResearchSlide = 0;
+
+  function updateResearchSlider() {
+    researchSlides.forEach(slide => {
+      slide.classList.remove('active', 'prev', 'next');
+    });
+
+    const prevIndex = (currentResearchSlide - 1 + researchSlides.length) % researchSlides.length;
+    const nextIndex = (currentResearchSlide + 1) % researchSlides.length;
+
+    researchSlides[currentResearchSlide].classList.add('active');
+    researchSlides[prevIndex].classList.add('prev');
+    researchSlides[nextIndex].classList.add('next');
+  }
+
+  function autoRotateResearchSlider() {
+    currentResearchSlide = (currentResearchSlide + 1) % researchSlides.length;
+    updateResearchSlider();
+  }
+
+  updateResearchSlider();
+  setInterval(autoRotateResearchSlider, 3000);
+</script>

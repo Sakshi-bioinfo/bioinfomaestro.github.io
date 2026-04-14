@@ -1,0 +1,14 @@
+- title: "Comparison of Multiple Machine Learning Approaches for Sex-Specific Survival Modeling in Meningioma"
+  description:
+    - "This project focuses on developing and evaluating machine learning-based survival models to understand sex-specific differences in meningioma recurrence. By stratifying patients into male and female cohorts, the study aims to uncover distinct molecular and prognostic patterns that are often overlooked in pooled analyses."
+    - "I designed and implemented a comprehensive computational pipeline benchmarking multiple survival models, including Cox Proportional Hazards, Random Survival Forests, Survival SVMs, and Gradient Boosting approaches. The models were evaluated using metrics such as Uno’s C-index, time-dependent AUC, and Integrated Brier Score, with validation performed on independent external datasets."
+    - "The analysis further incorporated explainability techniques to identify key gene signatures driving risk predictions, providing insights into sex-stratified tumor biology and supporting the development of more personalized prognostic frameworks in cancer research."
+  image: "/images/projects/meningioma.png"
+  link: "/assets/files/dissertation.pdf"
+
+- title: "OncoGen.AI: AI-powered Mutation Analysis Software Revolutionizing Cancer Treatment with  Personalized Therapy"
+  description:
+    - "OncoGen.AI is an AI-powered platform designed to assist in the interpretation of genomic variants and support clinical decision-making in oncology. The system integrates computational analysis with interactive visualization to streamline the exploration of next-generation sequencing (NGS) data."
+    - "In this project, I contributed to the development of the front-end architecture, focusing on building intuitive and responsive user interfaces using R Shiny. I worked on integrating visualization components with backend analytical modules, enabling seamless interaction with mutation data, annotated results, and AI-assisted outputs."
+    - "This work enhanced the usability and accessibility of complex genomic data, contributing to a platform deployed in a clinical research setting for cancer analysis."
+  image: "/images/projects/oncogenai.png"

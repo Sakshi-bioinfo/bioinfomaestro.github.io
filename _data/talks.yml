@@ -1,0 +1,41 @@
+classroom:
+  - title: "Single-Cell RNA-seq Data Analysis: Understanding Cellular Heterogeneity"
+    place: "MSc Bioinformatics, Department of Computer Science, Jamia Millia Islamia"
+    summary: "Single-cell RNA sequencing (scRNA-seq) has transformed our ability to study cellular heterogeneity by enabling gene expression analysis at the resolution of individual cells. This approach provides deeper insights into cellular identity, function, and dynamic biological processes that are often masked in bulk analyses. This presentation provides a comprehensive overview of the scRNA-seq analysis pipeline, covering key steps such as data preprocessing, feature selection, dimensionality reduction, clustering, cell type identification, and differential expression analysis. It further integrates case studies from cancer biology and developmental systems to demonstrate how these techniques uncover functional diversity among cells. These insights highlight the growing importance of single-cell technologies in understanding complex biological systems and advancing precision medicine."
+    image: "/images/talks/scrna_seq.png"
+    file: "/assets/files/scrna_seq.pptx"
+
+  - title: "Molecular Docking with Autodock"
+    place: "MSc Bioinformatics, Department of Computer Science, Jamia Millia Islamia"
+    summary: "Molecular docking is a key computational approach in structure-based drug design, enabling the prediction of interactions between ligands and receptor proteins. It plays a crucial role in understanding molecular recognition and accelerating the identification of potential therapeutic compounds. This presentation provides a comprehensive overview of molecular docking principles, including different docking strategies, binding affinity estimation, and scoring functions. It further explores the AutoDock platform, highlighting its use of the Lamarckian genetic algorithm and outlining the practical workflow for performing docking studies. A case study involving ACE2 and antiviral ligands is included to demonstrate how these computational methods can be applied in real-world scenarios, offering both conceptual understanding and practical insight into modern drug discovery approaches."
+    image: "/images/talks/Autodock.jpeg"
+    file: "/assets/files/Autodock.pptx"
+
+  - title: "Bayes' Theorem"
+    place: "MSc Bioinformatics, Department of Computer Science, Jamia Millia Islamia"
+    summary: "Bayes' Theorem is a fundamental concept in probability theory that provides a mathematical framework for updating beliefs in the presence of new evidence. It forms the basis of many statistical inference methods and is widely applied in fields such as data science, machine learning, and medical diagnostics. This presentation introduces the principles of conditional probability and explains Bayes' Theorem through its mathematical formulation, detailing the roles of prior, likelihood, posterior, and marginal probabilities. It further outlines the step-by-step process involved in applying the theorem to real-world problems. Applications including disease risk prediction and Bayesian networks are explored to demonstrate how probabilistic reasoning can be used to model uncertainty and support decision-making in complex systems."
+    image: "/images/talks/Bayes_theorem.png"
+    file: "/assets/files/Bayes_theorem.pptx"
+
+  - title: "Dynamic Modeling of Cellular Processes"
+    place: "MSc Bioinformatics, Department of Computer Science, Jamia Millia Islamia"
+    summary: " Dynamic modeling provides a quantitative framework for understanding how biological systems evolve over time, enabling the study of complex cellular processes through mathematical representation. By integrating experimental observations with omics data, these models offer insights into system behavior and support hypothesis-driven research. This presentation introduces key modeling approaches, including Boolean networks, stochastic models, and Ordinary Differential Equations (ODEs), with a focus on how system variables and parameters are used to construct predictive models. It further outlines the methodological steps involved in translating biological processes into mathematical formulations. Applications ranging from fundamental processes such as the central dogma to advanced areas like cancer modeling and personalized medicine are explored, highlighting the growing role of dynamic modeling in modern computational biology."
+    image: "/images/talks/dynamic_modeling.jpg"
+    file: "/assets/files/dynamic_modeling.pptx"
+
+conference:
+  - title: "Lung Cancer: The Most Prevalent Cancer Among All Cancers"
+    place: "Health 2021 Virtual International Conference on 'Cancer Biology: Advances & Challenges,' University of Delhi"
+    summary: "Lung cancer is one of the leading causes of cancer-related mortality worldwide, with significant variation in incidence across different populations. The disease is influenced by multiple risk factors, including smoking, environmental exposure, and socio-economic conditions, making it a major public health concern. This study examines global incidence patterns of lung cancer, comparing rates across multiple countries and analyzing differences between male and female populations. The findings highlight higher incidence rates in developed regions, likely associated with industrialization and lifestyle factors, while also revealing gender-based disparities linked to social and behavioral influences. These observations provide insight into the global burden of lung cancer and emphasize the importance of targeted prevention and awareness strategies."
+    image: "/images/talks/lung-cancer-poster.jpg"
+    file: "/assets/files/lung-cancer-poster.pdf"
+
+  - title: "HYPOXIA: Decoded at Molecular Level"
+    place: "International Conference on Natural Products and Human Health-2020, University of Delhi"
+    summary: "Oxygen is essential for cellular metabolism and energy production, and the human body has evolved precise mechanisms to respond to variations in oxygen availability. Hypoxia, a condition of low oxygen levels, triggers adaptive molecular responses that are critical for maintaining physiological balance.
+
+This work explores the oxygen-sensing mechanism at the molecular level, focusing on the role of Hypoxia-Inducible Factor (HIF) and its regulation through pathways involving prolyl hydroxylation and the Von Hippel–Lindau (VHL) protein complex. It highlights how these interactions control erythropoietin (EPO) production and red blood cell formation, enabling cellular adaptation under hypoxic conditions.
+
+These insights emphasize the importance of oxygen-sensing pathways in disease progression, including cancer, anemia, and metabolic disorders."
+    image: "/images/talks/Hypoxia-poster.jpg"
+    file: "/assets/files/Hypoxia-poster.pdf"

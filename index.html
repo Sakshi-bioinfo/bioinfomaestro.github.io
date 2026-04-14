@@ -1,0 +1,68 @@
+---
+layout: default
+title: Home
+---
+
+<section class="intro-section">
+
+  <div class="intro-card">
+
+    <div class="intro-text">
+
+      <h2>Sakshi Sharma</h2>
+
+      <p>
+        Sakshi Sharma is a bioinformatics researcher working at the intersection of biology and machine learning, focusing on understanding disease progression and improving clinical decision-making. She builds computational models that translate complex biological data into meaningful insights. Her work seeks to advance healthcare toward more predictive, accessible, and equitable systems through intelligent and interpretable approaches for modern medicine globally.</p>
+
+      <a href="{{ '/about/' | relative_url }}" class="about-btn">About</a>
+
+    </div>
+
+    <div class="intro-image">
+      <img src="{{ '/images/sakshi7.jpg' | relative_url }}" alt="Sakshi Sharma">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="posts">
+
+  <h3>Latest Posts</h3>
+
+<div class="post-grid">
+
+  {% for post in site.posts limit:3 %}
+  <div class="post-card">
+
+    <a href="{{ post.url | relative_url }}" class="post-link">
+
+      <div class="post-image">
+        <div class="image-wrapper">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        </div>
+      </div>
+
+      <!-- 👇 THIS IS THE NEW PART -->
+      <div class="post-content">
+
+        <h4 class="post-title">
+          {{ post.title }}
+        </h4>
+
+        <p class="post-meta">
+          {{ post.date | date: "%B %Y" }} • {{ post.read_time }} min read
+        </p>
+
+      </div>
+
+    </a>
+
+  </div>
+  {% endfor %}
+
+</div>
+
+  <a href="{{ '/blog/' | relative_url }}" class="about-btn">More Posts</a>
+
+</section>

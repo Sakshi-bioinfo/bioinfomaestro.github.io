@@ -1,0 +1,200 @@
+/* =========================
+   PUBLICATIONS PAGE
+========================= */
+
+.publications-page {
+  width: 100%;
+  background: #f6f7f9;
+  padding: 5px 20px 50px;
+}
+
+.publications-section {
+  max-width: 1400px;
+  margin: 10px auto 10px;
+}
+
+.publications-section h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size:28px;
+  font-weight:500;
+  color:#1C3D5A;
+  margin-bottom: 35px;
+}
+
+.publication-group {
+  margin-bottom: 0;
+}
+
+.publication-group h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size:24px;
+  font-weight:400;
+  color:#1C3D5A;
+  margin-bottom: 0;
+  padding: 0 0 0 20px;
+}
+
+.publication-authors{
+  font-size:16px;
+  margin-top:0;
+  margin-bottom:5px;
+  padding-left: 20px;
+  color:#555;
+}
+
+.publication-venue{
+  font-size:16px;
+  font-style:italic;
+  color:#555;
+  margin-top:0;
+  margin-bottom:12px;
+  padding-left: 20px;
+}
+
+.publication-abstract-heading{
+  font-size:16px;
+  font-weight:600;
+  margin-top:8px;
+  margin-bottom:2px;
+  color:#1C3D5A;
+  padding-left: 20px;
+}
+
+.publication-list {
+  margin: 0;
+  padding-left: 28px;
+}
+
+.publication-list li {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #24384d;
+  margin-bottom: 10px;
+}
+
+.publication-links {
+  margin-top: 36px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.publication-btn {
+  display: inline-block;
+  background: #3c89c9;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.publication-btn:hover {
+  background: #246aa4;
+  transform: translateY(-2px);
+}
+
+/* NEW CARD LAYOUT */
+
+.publication-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+/* LEFT SIDE */
+
+.publication-content {
+  flex: 1;
+}
+
+.publication-title {
+  font-family: 'Poppins', sans-serif;
+  font-size:20px;
+  font-weight:300;
+  margin-bottom: 5px;
+  padding: 0 20px 0 20px;
+}
+
+.publication-title a {
+  color: #1C3D5A;
+  text-decoration: none;
+}
+
+.publication-title a:hover {
+  color: #3c89c9;
+}
+
+/* DESCRIPTION */
+
+.publication-description {
+  font-family: 'Manrope', sans-serif;
+  margin-top:2px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #24384d;
+  text-align: justify;
+  padding: 0 20px 0 20px;
+}
+
+/* RIGHT IMAGE */
+
+.publication-image {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.publication-image img {
+  width: 100%;
+  border-radius: 6px;
+  padding: 0 20px 0 0px;
+}
+
+/* DIVIDER */
+
+.publication-divider {
+  border: none;
+  height: 1px;
+  background: #d9d9d9;
+  margin: 25px 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .publication-card {
+    flex-direction: column;
+  }
+
+  .publication-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .publications-page {
+    padding: 30px 10px 50px;
+  }
+  .publications-section h1 {
+    font-size: 24px;
+  }
+
+  .publication-group h2 {
+    font-size: 1.2rem;
+  }
+
+  .publication-list li {
+    font-size: 0.96rem;
+    line-height: 1.8;
+  }
+
+  .publication-links {
+    gap: 14px;
+  }
+}

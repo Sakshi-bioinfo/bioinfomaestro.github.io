@@ -1,0 +1,201 @@
+/* =========================
+   TALKS PAGE
+========================= */
+
+.talks-page {
+  width: 100%;
+  background: #f6f7f9;
+  padding: 10px 20px 50px;
+}
+
+.talks-section {
+  max-width: 1350px;
+  margin: 20px auto 10px;
+}
+
+.talks-section h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size:28px;
+  font-weight:500;
+  color:#1C3D5A;
+  margin-bottom: 30px;
+}
+
+.talks-group {
+  margin-bottom: 42px;
+}
+
+.talks-group h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size:24px;
+  font-weight:400;
+  color:#1C3D5A;
+  margin-bottom: 20px;
+}
+
+.talk-card {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  background: #ffffff;
+  padding: 22px 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.talk-image {
+  flex: 0 0 420px;
+  max-width: 420px;
+
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+}
+
+.talk-image img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 420px;
+  height: auto;
+  transform: scale(1.05);
+}
+
+/* FIXED SIZE ONLY FOR CLASSROOM IMAGES */
+
+.classroom-image {
+  height: 220px;   /* control card consistency */
+  overflow: hidden;
+}
+
+.classroom-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 🔥 THIS IS THE MAGIC */
+  transform: none;     /* remove scaling distortion */
+}
+
+.talk-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.talk-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size:20px;
+  font-weight:300;
+  color:#1C3D5A;
+  margin: 0 0 10px;
+}
+
+.talk-meta {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  color: #44586b;
+  margin: 0 0 10px;
+}
+
+.talk-summary {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #44586b;
+  margin: 0 0 14px;
+  transition: 0.3s ease;
+
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.talk-summary.expanded {
+  max-height: 1000px;
+}
+
+.talk-toggle {
+  color: #8e949c !important;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 300 !important;
+  display: inline-block;
+  margin-top: 2px;
+  text-align: right !important;
+}
+
+.talk-toggle:hover {
+  color: #3c89c9 !important;
+}
+
+.talk-link {
+  margin-left: auto;   /* push right */
+  margin-top: auto;    /* push down */
+  align-self: flex-end;          /* 🔥 THIS pushes it to extreme right */
+  font-size: 0.9rem;
+  color: #3c89c9;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  transition: 0.2s ease;
+}
+
+.talk-link:hover {
+  color: #246aa4;
+  transform: translateY(-2px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .talk-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .talk-image {
+    flex: unset;
+    width: 100%;
+  }
+
+  .talk-image img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .talk-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .talks-page {
+    padding: 30px 10px 50px;
+  }
+
+  .talks-section h1 {
+    font-size: 24px;
+  }
+
+  .talks-group h2 {
+    font-size: 1.2rem;
+  }
+
+  .talk-card {
+    padding: 18px;
+  }
+
+  .talk-content h3 {
+    font-size: 1.08rem;
+  }
+
+  .talk-meta,
+  .talk-summary {
+    font-size: 0.96rem;
+  }
+}

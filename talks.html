@@ -1,0 +1,81 @@
+---
+layout: default
+title: Talks
+permalink: /talks/
+custom_css: /talks.css
+---
+
+<section class="talks-page">
+  <section class="talks-section">
+    <h1>Presentations</h1>
+
+    <!-- CLASSROOM PRESENTATIONS -->
+    <div class="talks-group">
+  <h2>Classroom Presentations</h2>
+
+  {% for talk in site.data.talks.classroom %}
+  <div class="talk-card">
+
+    <div class="talk-image classroom-image">
+      <img src="{{ talk.image | relative_url }}" alt="{{ talk.title }}">
+    </div>
+
+    <div class="talk-content">
+      <h3>{{ talk.title }}</h3>
+      <p class="talk-meta"><strong>Presented at:</strong> {{ talk.place }}</p>
+
+      <div class="talk-text-block">
+        <p class="talk-summary">{{ talk.summary }}</p>
+        <span class="talk-toggle" onclick="toggleTalkText(this)">...more</span>
+      </div>
+    </div>
+      <a href="{{ talk.file | relative_url }}" class="talk-link" target="_blank">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+      </a>
+  </div>
+  {% endfor %}
+</div>
+
+    <!-- CONFERENCE POSTER PRESENTATIONS -->
+    <div class="talks-group">
+  <h2>Conference Poster Presentations</h2>
+
+  {% for talk in site.data.talks.conference %}
+  <div class="talk-card">
+
+    <div class="talk-image">
+      <img src="{{ talk.image | relative_url }}" alt="{{ talk.title }}">
+    </div>
+
+    <div class="talk-content">
+      <h3>{{ talk.title }}</h3>
+      <p class="talk-meta"><strong>Presented at:</strong> {{ talk.place }}</p>
+
+      <div class="talk-text-block">
+        <p class="talk-summary">{{ talk.summary }}</p>
+        <span class="talk-toggle" onclick="toggleTalkText(this)">...more</span>
+      </div>
+
+    </div>
+<a href="{{ talk.file | relative_url }}" class="talk-link" target="_blank">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+      </a>
+  </div>
+  {% endfor %}
+</div>
+  </section>
+</section>
+
+<script>
+function toggleTalkText(element) {
+  const text = element.previousElementSibling;
+
+  if (text.classList.contains("expanded")) {
+    text.classList.remove("expanded");
+    element.innerText = "...more";
+  } else {
+    text.classList.add("expanded");
+    element.innerText = "less";
+  }
+}
+</script>
